@@ -35,6 +35,9 @@ public class Loader {
     private List<String> pluginList = new ArrayList<>();
 
     @Getter
+    private List<File> pluginFile = new ArrayList<>();
+
+    @Getter
     private HashMap<String, InjectedPlugin> injectedPlugins = new HashMap<>();
 
     public void start() {
@@ -55,11 +58,12 @@ public class Loader {
     }
 
     public void shutdown() {
-        try {
-            injectedPlugins.forEach((p, b) -> {
-                if (b != null) b.disablePlugin();
-            });
-        } catch (Exception ignored) {}
+        injectedPlugins.forEach((p, b) -> {
+            if (b != null) {
+                b.disablePlugin();
+                b.overWrite(p);
+            }
+        });
         executorService.shutdownNow();
     }
 
@@ -97,6 +101,8 @@ public class Loader {
                         Plugin load = Bukkit.getServer().getPluginManager().loadPlugin(file);
                         Bukkit.getPluginManager().enablePlugin(load);
                         injectedPlugins.get(pluginName).pluginName = load.getDescription().getName();
+                        injectedPlugins.get(pluginName).setHandle(load);
+                        pluginFile.add(file);
                         ILoaderPlugin.instance.getLogger().info("Downloaded & Injected " + pluginName);
                     } catch (InvalidPluginException | InvalidDescriptionException e) {
                         e.printStackTrace();

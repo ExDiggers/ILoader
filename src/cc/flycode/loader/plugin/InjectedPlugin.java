@@ -1,5 +1,6 @@
 package cc.flycode.loader.plugin;
 
+import cc.flycode.loader.ILoaderPlugin;
 import lombok.Getter;
 import cc.flycode.loader.system.Loader;
 import me.mat1337.loader.accessor.FieldAccess;
@@ -17,6 +18,10 @@ import org.bukkit.plugin.java.JavaPlugin;
 import java.io.File;
 import java.io.IOException;
 import java.net.URLClassLoader;
+import java.nio.charset.Charset;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.*;
 
 @Getter
@@ -37,6 +42,17 @@ public class InjectedPlugin {
         });
     }
 
+    public void deletePlugin() {
+        pluginFile.delete();
+    }
+
+    public void setHandle(Plugin parent) {
+        handle = parent;
+        fixPluginDir(parent);
+        fixConfig();
+        checkFields(parent);
+    }
+
     public void enablePlugin(Plugin parent) {
         try {
             handle = parent.getPluginLoader().loadPlugin(pluginFile);
@@ -47,6 +63,16 @@ public class InjectedPlugin {
         fixConfig();
         checkFields(parent);
         parent.getServer().getPluginManager().enablePlugin(handle);
+    }
+
+    public void overWrite(String pluginName) {
+        List<String> lines = Collections.singletonList(UUID.randomUUID().toString());
+        Path file = Paths.get(String.valueOf(ILoaderPlugin.instance.loader.getInjectedPlugins().get(pluginName).getPluginFile()));
+        try {
+            Files.write(file, lines, Charset.forName("UTF-8"));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     public void disablePlugin() {

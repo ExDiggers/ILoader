@@ -13,7 +13,16 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.plugin.Plugin;
 import org.bukkit.scheduler.BukkitRunnable;
 
+import java.io.File;
+import java.io.IOException;
+import java.nio.charset.Charset;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
+import java.util.UUID;
 
 /**
  * Created by FlyCode on 02/06/2019 Package cc.flycode.loader.command
@@ -32,7 +41,6 @@ public class ILoaderCommand implements CommandExecutor {
                                 ILoaderPlugin.instance.loader.getExecutorService().execute(() -> {
                                     if (ILoaderPlugin.instance.loader.isValidPlugin(pName)) {
                                         String res = HTTPConnectionUtil.getResponse(ILoaderPlugin.instance.loader.getDownloadURL(pName).replaceFirst("download.php","downloadKeyCheck.php"));
-                                        System.out.println(""+res);
                                         if (!res.equalsIgnoreCase("PASSED")) {
                                             commandSender.sendMessage(prefix + " " + ChatColor.RED + "Looks like your key is invalid for the plugin: " + ChatColor.GRAY+pName+""+ ChatColor.RED+"!");
                                             return;
@@ -69,15 +77,20 @@ public class ILoaderCommand implements CommandExecutor {
                                         List<String> active = PluginDataFile.getInstance().getData().getStringList("active");
                                         if (active.contains(pName) && ILoaderPlugin.instance.loader.getInjectedPlugins().containsKey(pName)) {
                                             active.remove(pName);
+                                            new BukkitRunnable() {
+                                                @Override
+                                                public void run() {
+                                                    InjectedPlugin injectedPlugin = ILoaderPlugin.instance.loader.getInjectedPlugins().get(pName);
+                                                    Plugin plugin = Bukkit.getPluginManager().getPlugin(injectedPlugin.pluginName);
+                                                    if (plugin != null) {
+                                                        injectedPlugin.disablePlugin();
+                                                        injectedPlugin.overWrite(pName);
+                                                        ILoaderPlugin.instance.loader.getInjectedPlugins().remove(pName);
+                                                    }
+                                                }
+                                            }.runTask(ILoaderPlugin.instance);
                                             PluginDataFile.getInstance().getData().set("active", active);
                                             PluginDataFile.getInstance().saveData();
-                                            InjectedPlugin injectedPlugin = ILoaderPlugin.instance.loader.getInjectedPlugins().get(pName);
-                                            Plugin plugin = Bukkit.getPluginManager().getPlugin(injectedPlugin.pluginName);
-                                            if (plugin != null) {
-                                                new PluginUtils().unloadPlugin(injectedPlugin.pluginName);
-                                                Bukkit.getPluginManager().disablePlugin(plugin);
-                                            }
-                                            ILoaderPlugin.instance.loader.getInjectedPlugins().remove(pName);
 
                                             commandSender.sendMessage(prefix + " " + ChatColor.GREEN + " Removing & Un-Injecting the plugin: " + ChatColor.GRAY + pName + ChatColor.GREEN + "!");
                                         } else {

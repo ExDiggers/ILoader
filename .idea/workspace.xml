@@ -6,7 +6,26 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="17b0267e-8edb-46eb-b2ce-94cc99448e5f" name="Default Changelist" comment="" />
+    <list default="true" id="eec953d7-74ae-4596-8f25-a79c4f01dc03" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ILoader/cc/flycode/loader/command/ILoaderCommand.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ILoader/cc/flycode/loader/command/ILoaderCommand.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ILoader/cc/flycode/loader/config/ConfigManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ILoader/cc/flycode/loader/config/ConfigManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ILoader/cc/flycode/loader/config/ConfigValues.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ILoader/cc/flycode/loader/config/ConfigValues.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ILoader/cc/flycode/loader/downloader/FileDownloader.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ILoader/cc/flycode/loader/downloader/FileDownloader.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ILoader/cc/flycode/loader/plugin/InjectedPlugin.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ILoader/cc/flycode/loader/plugin/InjectedPlugin.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ILoader/cc/flycode/loader/system/AutoUpdater$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ILoader/cc/flycode/loader/system/AutoUpdater$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ILoader/cc/flycode/loader/system/AutoUpdater.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ILoader/cc/flycode/loader/system/AutoUpdater.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ILoader/cc/flycode/loader/system/Loader$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ILoader/cc/flycode/loader/system/Loader$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ILoader/cc/flycode/loader/system/Loader.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ILoader/cc/flycode/loader/system/Loader.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ILoader/cc/flycode/loader/util/file/KeyFile.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ILoader/cc/flycode/loader/util/file/KeyFile.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cc/flycode/loader/command/ILoaderCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cc/flycode/loader/command/ILoaderCommand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cc/flycode/loader/plugin/InjectedPlugin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cc/flycode/loader/plugin/InjectedPlugin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cc/flycode/loader/system/Loader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cc/flycode/loader/system/Loader.java" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,41 +34,12 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/cc/flycode/loader/system/AutoUpdater.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="27" selection-start-line="27" selection-end-line="27" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1233#1922#0" expanded="true" />
-                <element signature="e#1921#1922#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/cc/flycode/loader/command/ILoaderCommand.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="73" column="44" selection-start-line="73" selection-start-column="44" selection-end-line="73" selection-end-column="138" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/cc/flycode/loader/ILoaderPlugin.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="437">
-              <caret line="19" column="25" lean-forward="true" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="25" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="391">
+              <caret line="19" column="23" lean-forward="true" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -57,67 +47,101 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/cc/flycode/loader/system/Loader.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="668">
-              <caret line="99" column="41" lean-forward="true" selection-start-line="99" selection-start-column="41" selection-end-line="99" selection-end-column="41" />
+            <state relative-caret-position="276">
+              <caret line="60" column="43" lean-forward="true" selection-start-line="60" selection-start-column="43" selection-end-line="60" selection-end-column="43" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/cc/flycode/loader/command/ILoaderCommand.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="483">
+              <caret line="92" column="57" lean-forward="true" selection-start-line="92" selection-start-column="57" selection-end-line="92" selection-end-column="57" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#5426#6990#0" expanded="true" />
+                <element signature="e#6989#6990#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk1.8.0_161/src.zip!/java/util/concurrent/ScheduledExecutorService.java">
+        <entry file="file://$PROJECT_DIR$/src/cc/flycode/loader/util/PluginUtils.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
-              <caret line="146" column="69" lean-forward="true" selection-start-line="146" selection-start-column="69" selection-end-line="146" selection-end-column="69" />
+            <state relative-caret-position="207">
+              <caret line="21" column="18" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://O:/Bukkit Jars/spigot 1.8 API.jar!/org/bukkit/plugin/PluginManager.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="554">
+              <caret line="56" column="56" lean-forward="true" selection-start-line="56" selection-start-column="56" selection-end-line="56" selection-end-column="56" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://C:/Program Files/Java/jdk1.8.0_161/src.zip!/java/util/HashMap.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="363">
+              <caret line="557" column="5" lean-forward="true" selection-start-line="557" selection-start-column="5" selection-end-line="557" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/cc/flycode/loader/plugin/InjectedPlugin.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-413">
+              <caret line="42" column="5" lean-forward="true" selection-start-line="42" selection-start-column="5" selection-end-line="42" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1242#1243#0" expanded="true" />
+                <element signature="e#1277#1278#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/cc/flycode/loader/downloader/FileDownloader.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="368">
+              <caret line="30" column="28" lean-forward="true" selection-start-line="30" selection-start-column="28" selection-end-line="30" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://O:/Bukkit Jars/spigot 1.8 API.jar!/org/bukkit/plugin/Plugin.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="761">
+              <caret line="55" column="11" selection-start-line="55" selection-start-column="11" selection-end-line="55" selection-end-column="11" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>fix</find>
-    </findStrings>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/me/mat1337/loader/Loader.java" />
-        <option value="$PROJECT_DIR$/src/cc/flycode/loader/system/ILoaderPlugin.java" />
-        <option value="$PROJECT_DIR$/src/cc/flycode/loader/Loader.java" />
-        <option value="$PROJECT_DIR$/src/cc/flycode/loader/util/HTTPConnectionUtil.java" />
-        <option value="$PROJECT_DIR$/src/cc/flycode/loader/util/StringUtils.java" />
-        <option value="$PROJECT_DIR$/src/cc/flycode/loader/util/KeyFile.java" />
-        <option value="$PROJECT_DIR$/src/cc/flycode/loader/util/ConfigValues.java" />
-        <option value="$PROJECT_DIR$/src/cc/flycode/loader/util/config/ConfigValues.java" />
-        <option value="$PROJECT_DIR$/src/cc/flycode/loader/util/file/PluginDataFile.java" />
-        <option value="$PROJECT_DIR$/src/cc/flycode/loader/downloader/FileDownloader.java" />
-        <option value="$PROJECT_DIR$/src/cc/flycode/loader/system/ALAPI.java" />
-        <option value="$PROJECT_DIR$/src/cc/flycode/loader/util/file/KeyFile.java" />
-        <option value="$PROJECT_DIR$/src/cc/flycode/loader/config/ConfigValues.java" />
-        <option value="$PROJECT_DIR$/src/cc/flycode/loader/config/ConfigManager.java" />
-        <option value="$PROJECT_DIR$/plugin.yml" />
         <option value="$PROJECT_DIR$/src/cc/flycode/loader/plugin/InjectedPlugin.java" />
-        <option value="$PROJECT_DIR$/src/cc/flycode/loader/util/PluginUtils.java" />
-        <option value="$PROJECT_DIR$/src/cc/flycode/loader/command/ILoaderCommand.java" />
-        <option value="$PROJECT_DIR$/src/cc/flycode/loader/ILoaderPlugin.java" />
+        <option value="$PROJECT_DIR$/src/cc/flycode/loader/downloader/FileDownloader.java" />
         <option value="$PROJECT_DIR$/src/cc/flycode/loader/system/Loader.java" />
-        <option value="$PROJECT_DIR$/src/cc/flycode/loader/system/AutoUpdater.java" />
+        <option value="$PROJECT_DIR$/src/cc/flycode/loader/command/ILoaderCommand.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-233" />
+    <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1936" />
     <option name="height" value="1056" />
@@ -152,6 +176,13 @@
               <item name="ILoader" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="loader" type="462c0819:PsiDirectoryNode" />
+              <item name="command" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ILoader" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ILoader" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="loader" type="462c0819:PsiDirectoryNode" />
               <item name="system" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -161,24 +192,20 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="GenerateAntBuildDialog.backupFiles" value="true" />
+    <property name="GenerateAntBuildDialog.enableUiFormCompile" value="true" />
+    <property name="GenerateAntBuildDialog.forceTargetJdk" value="true" />
+    <property name="GenerateAntBuildDialog.outputFileNameProperty" value="iloader" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1559457831674" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/plugin.yml" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1559496221903" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/lombok.jar!/" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15882678" />
-    <property name="project.structure.side.proportion" value="0.16107824" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.annotationProcessors" />
-  </component>
-  <component name="RecentsManager">
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="cc.flycode.loader.util.file" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="R:\Dropbox\IntelliJ\ILoader\src\cc\flycode\loader\util" />
-    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -236,23 +263,24 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="17b0267e-8edb-46eb-b2ce-94cc99448e5f" name="Default Changelist" comment="" />
-      <created>1559442771520</created>
+      <changelist id="eec953d7-74ae-4596-8f25-a79c4f01dc03" name="Default Changelist" comment="" />
+      <created>1559459359066</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1559442771520</updated>
-      <workItem from="1559442775231" duration="14784000" />
+      <updated>1559459359066</updated>
+      <workItem from="1559459362988" duration="798000" />
+      <workItem from="1559492576975" duration="3515000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14784000" />
+    <option name="totallyTimeSpent" value="4313000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25052083" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.31197917" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -269,7 +297,7 @@
       <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49895832" weight="0.32861805" />
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5453125" side_tool="true" weight="0.01194354" />
       <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Messages" order="10" sideWeight="0.4546875" visible="true" weight="0.03257329" />
+      <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.4546875" weight="0.03257329" />
       <window_info anchor="bottom" id="Duplicate detector" order="11" weight="0.32910052" />
       <window_info anchor="bottom" id="Docker" order="12" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="13" />
@@ -289,65 +317,8 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/cc/flycode/loader/util/file/PluginDataFile.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="51" selection-start-line="51" selection-end-line="51" />
-          <folding>
-            <element signature="e#1304#1305#0" expanded="true" />
-            <element signature="e#1534#1535#0" expanded="true" />
-            <element signature="e#1607#1608#0" expanded="true" />
-            <element signature="e#1844#1845#0" expanded="true" />
-            <element signature="e#1931#1932#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cc/flycode/loader/util/HTTPConnectionUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="17" column="65" selection-start-line="17" selection-start-column="65" selection-end-line="17" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cc/flycode/loader/downloader/FileDownloader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="18" selection-start-column="18" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cc/flycode/loader/config/ConfigValues.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="6" column="25" lean-forward="true" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cc/flycode/loader/config/ConfigManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="13" column="87" selection-start-line="13" selection-start-column="87" selection-end-line="13" selection-end-column="87" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cc/flycode/loader/util/file/KeyFile.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="55" column="68" selection-start-line="55" selection-start-column="68" selection-end-line="55" selection-end-column="68" />
-          <folding>
-            <element signature="e#1033#1034#0" expanded="true" />
-            <element signature="e#1060#1061#0" expanded="true" />
-            <element signature="e#1575#1576#0" expanded="true" />
-            <element signature="e#1648#1649#0" expanded="true" />
-            <element signature="e#1885#1886#0" expanded="true" />
-            <element signature="e#1972#1973#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/ILoader.iml">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/plugin.yml">
       <provider selected="true" editor-type-id="text-editor">
@@ -356,77 +327,74 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/cc/flycode/loader/system/ALAPI.java">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_161/src.zip!/java/util/HashMap.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="19" column="5" lean-forward="true" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
+        <state relative-caret-position="363">
+          <caret line="557" column="5" lean-forward="true" selection-start-line="557" selection-start-column="5" selection-end-line="557" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://O:/Bukkit Jars/spigot 1.8 API.jar!/org/bukkit/plugin/PluginManager.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="554">
+          <caret line="56" column="56" lean-forward="true" selection-start-line="56" selection-start-column="56" selection-end-line="56" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://O:/Bukkit Jars/spigot 1.8 API.jar!/org/bukkit/plugin/Plugin.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="761">
+          <caret line="55" column="11" selection-start-line="55" selection-start-column="11" selection-end-line="55" selection-end-column="11" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/cc/flycode/loader/plugin/InjectedPlugin.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="277">
-          <caret line="65" column="16" selection-start-line="65" selection-start-column="16" selection-end-line="65" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cc/flycode/loader/util/PluginUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1630" />
-      </provider>
-    </entry>
-    <entry file="jar://O:/Bukkit Jars/spigot 1.8 API.jar!/org/bukkit/command/CommandSender.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="11" column="9" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_161/src.zip!/java/util/concurrent/ScheduledExecutorService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="146" column="69" lean-forward="true" selection-start-line="146" selection-start-column="69" selection-end-line="146" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cc/flycode/loader/system/Loader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="668">
-          <caret line="99" column="41" lean-forward="true" selection-start-line="99" selection-start-column="41" selection-end-line="99" selection-end-column="41" />
+        <state relative-caret-position="-413">
+          <caret line="42" column="5" lean-forward="true" selection-start-line="42" selection-start-column="5" selection-end-line="42" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#1242#1243#0" expanded="true" />
+            <element signature="e#1277#1278#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cc/flycode/loader/downloader/FileDownloader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="30" column="28" lean-forward="true" selection-start-line="30" selection-start-column="28" selection-end-line="30" selection-end-column="28" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/cc/flycode/loader/ILoaderPlugin.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="19" column="25" lean-forward="true" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="391">
+          <caret line="19" column="23" lean-forward="true" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cc/flycode/loader/system/Loader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="60" column="43" lean-forward="true" selection-start-line="60" selection-start-column="43" selection-end-line="60" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/cc/flycode/loader/util/PluginUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="21" column="18" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="18" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/cc/flycode/loader/command/ILoaderCommand.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="73" column="44" selection-start-line="73" selection-start-column="44" selection-end-line="73" selection-end-column="138" />
+        <state relative-caret-position="483">
+          <caret line="92" column="57" lean-forward="true" selection-start-line="92" selection-start-column="57" selection-end-line="92" selection-end-column="57" />
           <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/cc/flycode/loader/system/AutoUpdater.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="27" selection-start-line="27" selection-end-line="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1233#1922#0" expanded="true" />
-            <element signature="e#1921#1922#0" expanded="true" />
+            <element signature="e#5426#6990#0" expanded="true" />
+            <element signature="e#6989#6990#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -441,7 +409,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.16107824" />
+                <option value="0.2" />
                 <option value="0.5" />
               </list>
             </option>
@@ -500,7 +468,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.16107824" />
+                <option value="0.2" />
               </list>
             </option>
           </splitter-proportions>
@@ -524,7 +492,7 @@
           <splitter-proportions>
             <option name="proportions">
               <list>
-                <option value="0.16107824" />
+                <option value="0.2" />
               </list>
             </option>
           </splitter-proportions>
