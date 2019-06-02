@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="ILoader">
+    <output-path>E:/test server 2/plugins</output-path>
+    <root id="archive" name="ILoader.jar">
+      <element id="module-output" name="ILoader" />
+      <element id="file-copy" path="$PROJECT_DIR$/plugin.yml" />
+    </root>
+  </artifact>
+</component>
