@@ -95,20 +95,35 @@ public class Loader {
                         ILoaderPlugin.instance.getLogger().info("Error injecting the plugin - " + pluginName + " (cannot validate key)");
                         return;
                     }
-                    temp = new InjectedPlugin(new FileDownloader(URL).download());
+                    /*temp = new InjectedPlugin(new FileDownloader(URL).download());
                     File file = temp.getPluginFile();
                     try {
                         injectedPlugins.put(pluginName, temp);
                         Plugin load = Bukkit.getServer().getPluginManager().loadPlugin(file);
-                        injectedPlugins.get(pluginName).setHandle(load);
-                        Bukkit.getPluginManager().enablePlugin(load);
                         injectedPlugins.get(pluginName).pluginName = load.getDescription().getName();
+                        injectedPlugins.get(pluginName).setHandle(load);
+                        injectedPlugins.get(pluginName).fixPluginDir(load);
+                        injectedPlugins.get(pluginName).fixConfig();
+                        injectedPlugins.get(pluginName).checkFields(load);
+
+                        Bukkit.getPluginManager().enablePlugin(load);
+
+
+
 
                         pluginFile.add(file);
                         ILoaderPlugin.instance.getLogger().info("Downloaded & Injected " + pluginName);
                     } catch (InvalidPluginException | InvalidDescriptionException e) {
                         e.printStackTrace();
-                    }
+                    }*/
+
+                    InjectedPlugin plugin;
+                    plugin = new InjectedPlugin(new FileDownloader(URL).download());
+                    injectedPlugins.put(pluginName, plugin);
+                    injectedPlugins.get(pluginName).enablePlugin(ILoaderPlugin.instance);
+                    pluginFile.add(plugin.getPluginFile());
+                    ILoaderPlugin.instance.getLogger().info("Downloaded & Injected " + pluginName);
+
                 }
             }.runTask(ILoaderPlugin.instance);
         }

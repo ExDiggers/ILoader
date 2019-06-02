@@ -1,4 +1,4 @@
-package me.mat1337.loader.accessor;
+package cc.flycode.loader.accessor;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

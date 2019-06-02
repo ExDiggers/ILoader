@@ -1,10 +1,10 @@
 package cc.flycode.loader.plugin;
 
 import cc.flycode.loader.ILoaderPlugin;
+import cc.flycode.loader.accessor.FieldAccess;
+import cc.flycode.loader.accessor.Instance;
 import lombok.Getter;
 import cc.flycode.loader.system.Loader;
-import me.mat1337.loader.accessor.FieldAccess;
-import me.mat1337.loader.accessor.Instance;
 import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.PluginCommand;
@@ -27,9 +27,9 @@ import java.util.*;
 @Getter
 public class InjectedPlugin {
 
-    private File pluginFile;
-    private File root;
-    private Plugin handle;
+    public File pluginFile;
+    public File root;
+    public Plugin handle;
     public String pluginName;
 
     public InjectedPlugin(File pluginFile) {
@@ -46,13 +46,6 @@ public class InjectedPlugin {
         pluginFile.delete();
     }
 
-    public void setHandle(Plugin parent) {
-        handle = parent;
-        fixPluginDir(parent);
-        fixConfig();
-        checkFields(parent);
-    }
-
     public void enablePlugin(Plugin parent) {
         try {
             handle = parent.getPluginLoader().loadPlugin(pluginFile);
@@ -64,6 +57,8 @@ public class InjectedPlugin {
         checkFields(parent);
         parent.getServer().getPluginManager().enablePlugin(handle);
     }
+
+
 
     public void overWrite(String pluginName) {
         List<String> lines = Collections.singletonList(UUID.randomUUID().toString());
@@ -132,7 +127,7 @@ public class InjectedPlugin {
 
     }
 
-    private void checkFields(Plugin parent) {
+    public void checkFields(Plugin parent) {
         Arrays.stream(handle.getClass().getFields()).filter(field -> field.isAnnotationPresent(Instance.class)).forEach(field -> {
             try {
                 field.setAccessible(true);
@@ -151,17 +146,17 @@ public class InjectedPlugin {
         });
     }
 
-    private void fixConfig() {
+    public void fixConfig() {
         File file;
         new FieldAccess(JavaPlugin.class, "configFile").set(handle, (file = new File(root, "config.yml")));
         new FieldAccess(JavaPlugin.class, "newConfig").set(handle, YamlConfiguration.loadConfiguration(file));
     }
 
-    private void fixPluginDir(Plugin parent) {
+    public void fixPluginDir(Plugin parent) {
         new FieldAccess(JavaPlugin.class, "dataFolder").set(handle, (root = new File(parent.getDataFolder().getParentFile(), handle.getDescription().getName().replaceAll(" ", "_"))));
     }
 
-    private void closeLoader(URLClassLoader classLoader) {
+    public void closeLoader(URLClassLoader classLoader) {
         try {
             classLoader.close();
         } catch (IOException e) {

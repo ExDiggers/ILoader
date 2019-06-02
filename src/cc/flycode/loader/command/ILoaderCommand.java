@@ -67,6 +67,7 @@ public class ILoaderCommand implements CommandExecutor {
                         if (strings[0].equalsIgnoreCase("list")) {
                             commandSender.sendMessage(prefix + " " + ChatColor.YELLOW + "Here is a list of all of the plugins that are enabled / disabled:");
                             ILoaderPlugin.instance.loader.getPluginList().forEach((plugins) -> commandSender.sendMessage(ChatColor.GRAY + "> " + (ILoaderPlugin.instance.loader.getInjectedPlugins().containsKey(plugins.toLowerCase()) && Bukkit.getPluginManager().getPlugin(ILoaderPlugin.instance.loader.getInjectedPlugins().get(plugins.toLowerCase()).pluginName).isEnabled() ? ChatColor.GREEN : ChatColor.RED) + " " + plugins));
+                            return true;
                         }
                         if (strings[0].equalsIgnoreCase("uninstall")) {
                             try {
