@@ -43,7 +43,6 @@ public class Loader {
 
         //add all plugins here
         pluginList.add("IUtils");
-        pluginList.add("test");
 
         executorService.execute(() -> {
             List<String> shouldLoad;
@@ -119,7 +118,6 @@ public class Loader {
                     downloadURL = "(ERROR)";
                 }
                 break;
-
 
         }
         return downloadURL;
