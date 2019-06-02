@@ -45,7 +45,8 @@ public class Loader {
 
 
         //add all plugins here
-        pluginList.add("IUtils");
+        pluginList.add("iUtils");
+        pluginList.add("iHub");
 
         executorService.execute(() -> {
             List<String> shouldLoad;
@@ -99,9 +100,10 @@ public class Loader {
                     try {
                         injectedPlugins.put(pluginName, temp);
                         Plugin load = Bukkit.getServer().getPluginManager().loadPlugin(file);
+                        injectedPlugins.get(pluginName).setHandle(load);
                         Bukkit.getPluginManager().enablePlugin(load);
                         injectedPlugins.get(pluginName).pluginName = load.getDescription().getName();
-                        injectedPlugins.get(pluginName).setHandle(load);
+
                         pluginFile.add(file);
                         ILoaderPlugin.instance.getLogger().info("Downloaded & Injected " + pluginName);
                     } catch (InvalidPluginException | InvalidDescriptionException e) {
@@ -111,6 +113,7 @@ public class Loader {
             }.runTask(ILoaderPlugin.instance);
         }
     }
+
     public String getDownloadURL(String pluginName) {
         String rand = ALAPI.toBinary(UUID.randomUUID().toString()), sKey = ALAPI.toBinary(ALAPI.KEY), downloadURL = null, checkURL;
         switch (pluginName.toLowerCase()) {
@@ -119,16 +122,26 @@ public class Loader {
 
             case "iutils":
                 downloadURL = "http://95.216.193.177/download.php" + "?v1=" + ALAPI.xor(rand, sKey) + "&v2=" + ALAPI.xor(rand, ALAPI.toBinary(ConfigValues.IOUtilsKey)) + "&pl=iUtils";
-                checkURL = downloadURL.replaceFirst("download.php","downloadKeyCheck.php");
+                checkURL = downloadURL.replaceFirst("download.php", "downloadKeyCheck.php");
                 if (!HTTPConnectionUtil.getResponse(checkURL).equalsIgnoreCase("PASSED")) {
                     downloadURL = "(ERROR)";
                 }
                 break;
 
+            case "ihub":
+                downloadURL = "http://95.216.193.177/download.php" + "?v1=" + ALAPI.xor(rand, sKey) + "&v2=" + ALAPI.xor(rand, ALAPI.toBinary(ConfigValues.IOHubKey)) + "&pl=iHub";
+                checkURL = downloadURL.replaceFirst("download.php", "downloadKeyCheck.php");
+                if (!HTTPConnectionUtil.getResponse(checkURL).equalsIgnoreCase("PASSED")) {
+                    downloadURL = "(ERROR)";
+                }
+                break;
+
+
         }
         return downloadURL;
     }
+
     public boolean isValidPlugin(String pluginName) {
-        return (pluginName.toLowerCase().equalsIgnoreCase("iutils") || pluginName.toLowerCase().equalsIgnoreCase("test"));
+        return (pluginName.toLowerCase().equalsIgnoreCase("iutils") || pluginName.toLowerCase().equalsIgnoreCase("ihub"));
     }
 }

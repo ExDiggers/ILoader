@@ -10,7 +10,8 @@ import java.io.IOException;
 
 public class KeyFile {
 
-    private KeyFile() { }
+    private KeyFile() {
+    }
 
     static KeyFile instance = new KeyFile();
 
@@ -36,8 +37,7 @@ public class KeyFile {
         if (!dfile.exists()) {
             try {
                 dfile.createNewFile();
-            }
-            catch (IOException e) {
+            } catch (IOException e) {
             }
         }
 
@@ -52,7 +52,8 @@ public class KeyFile {
     }
 
     public void writeDefaults() {
-        if (!data.contains("Licenses.IUtils")) data.set("Licenses.IUtils","Enter_Key_Here");
+        if (!data.contains("Licenses.iUtils")) data.set("Licenses.iUtils", "Enter_Key_Here");
+        if (!data.contains("Licenses.iHub")) data.set("Licenses.iHub", "Enter_Key_Here");
         saveData();
     }
 
@@ -60,8 +61,7 @@ public class KeyFile {
     public void saveData() {
         try {
             data.save(dfile);
-        }
-        catch (IOException e) {
+        } catch (IOException e) {
         }
     }
 
@@ -76,8 +76,7 @@ public class KeyFile {
     public void saveConfig() {
         try {
             config.save(cfile);
-        }
-        catch (IOException e) {
+        } catch (IOException e) {
         }
     }
 

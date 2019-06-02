@@ -7,7 +7,6 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="spigot 1.8 API" level="project" />
-    <orderEntry type="library" name="lombok" level="project" />
+    <orderEntry type="library" name="lombok-1.18.6" level="project" />
   </component>
 </module>

@@ -41,10 +41,14 @@ public class AutoUpdater {
             }
         }), 20L, 20L, TimeUnit.SECONDS);
     }
+
     private String resolveVersionURL(String pluginName) {
         switch (pluginName) {
             //add plugins here follow the current format make sure its all lowercase and replace the names
-            case "iutils": return "http://95.216.193.177/pluginData.php?name=iutils";
+            case "iutils":
+                return "http://95.216.193.177/pluginData.php?name=iutils";
+            case "ihub":
+                return "http://95.216.193.177/pluginData.php?name=ihub";
         }
         return null;
     }

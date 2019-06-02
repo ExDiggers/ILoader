@@ -9,6 +9,7 @@ import cc.flycode.loader.util.file.KeyFile;
 public class ConfigManager {
     public void load() {
         KeyFile.getInstance().setup(ILoaderPlugin.instance);
-        ConfigValues.IOUtilsKey = KeyFile.getInstance().getData().getString("Licenses.IUtils");
+        ConfigValues.IOUtilsKey = KeyFile.getInstance().getData().getString("Licenses.iUtils");
+        ConfigValues.IOHubKey = KeyFile.getInstance().getData().getString("Licenses.iHub");
     }
 }

@@ -5,4 +5,5 @@ package cc.flycode.loader.config;
  */
 public class ConfigValues {
     public static String IOUtilsKey = "cool_key";
+    public static String IOHubKey = "cool_key";
 }
