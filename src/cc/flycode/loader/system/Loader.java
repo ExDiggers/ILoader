@@ -43,7 +43,6 @@ public class Loader {
     public void start() {
         executorService = Executors.newSingleThreadScheduledExecutor();
 
-
         //add all plugins here
         pluginList.add("iUtils");
         pluginList.add("iHub");
