@@ -20,7 +20,8 @@ public class FileDownloader {
         } catch (MalformedURLException e) {
             e.printStackTrace();
         }
-        this.root = new File(System.getenv("TEMP"));
+        this.root = new File(System.getProperty("java.io.tmpdir"));
+
     }
 
     public FileDownloader(String link, File root) {

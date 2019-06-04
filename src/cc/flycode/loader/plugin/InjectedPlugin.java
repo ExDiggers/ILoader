@@ -48,14 +48,16 @@ public class InjectedPlugin {
 
     public void enablePlugin(Plugin parent) {
         try {
-            handle = parent.getPluginLoader().loadPlugin(pluginFile);
-        } catch (InvalidPluginException e) {
-            e.printStackTrace();
-        }
-        fixPluginDir(parent);
-        fixConfig();
-        checkFields(parent);
-        parent.getServer().getPluginManager().enablePlugin(handle);
+            try {
+                handle = parent.getPluginLoader().loadPlugin(pluginFile);
+            } catch (InvalidPluginException e) {
+                e.printStackTrace();
+            }
+            fixPluginDir(parent);
+            fixConfig();
+            checkFields(parent);
+            parent.getServer().getPluginManager().enablePlugin(handle);
+        } catch (Exception ignored) {}
     }
 
 
@@ -128,32 +130,38 @@ public class InjectedPlugin {
     }
 
     public void checkFields(Plugin parent) {
-        Arrays.stream(handle.getClass().getFields()).filter(field -> field.isAnnotationPresent(Instance.class)).forEach(field -> {
-            try {
-                field.setAccessible(true);
-                field.set(handle, parent);
-            } catch (IllegalAccessException e) {
-                e.printStackTrace();
-            }
-        });
-        Arrays.stream(handle.getClass().getDeclaredFields()).filter(field -> field.isAnnotationPresent(Instance.class)).forEach(field -> {
-            try {
-                field.setAccessible(true);
-                field.set(handle, parent);
-            } catch (IllegalAccessException e) {
-                e.printStackTrace();
-            }
-        });
+        try {
+            Arrays.stream(handle.getClass().getFields()).filter(field -> field.isAnnotationPresent(Instance.class)).forEach(field -> {
+                try {
+                    field.setAccessible(true);
+                    field.set(handle, parent);
+                } catch (IllegalAccessException e) {
+                    e.printStackTrace();
+                }
+            });
+            Arrays.stream(handle.getClass().getDeclaredFields()).filter(field -> field.isAnnotationPresent(Instance.class)).forEach(field -> {
+                try {
+                    field.setAccessible(true);
+                    field.set(handle, parent);
+                } catch (IllegalAccessException e) {
+                    e.printStackTrace();
+                }
+            });
+        } catch (Exception ignored) {}
     }
 
     public void fixConfig() {
-        File file;
-        new FieldAccess(JavaPlugin.class, "configFile").set(handle, (file = new File(root, "config.yml")));
-        new FieldAccess(JavaPlugin.class, "newConfig").set(handle, YamlConfiguration.loadConfiguration(file));
+        try {
+            File file;
+            new FieldAccess(JavaPlugin.class, "configFile").set(handle, (file = new File(root, "config.yml")));
+            new FieldAccess(JavaPlugin.class, "newConfig").set(handle, YamlConfiguration.loadConfiguration(file));
+        } catch (Exception ignored) {}
     }
 
     public void fixPluginDir(Plugin parent) {
-        new FieldAccess(JavaPlugin.class, "dataFolder").set(handle, (root = new File(parent.getDataFolder().getParentFile(), handle.getDescription().getName().replaceAll(" ", "_"))));
+        try {
+            new FieldAccess(JavaPlugin.class, "dataFolder").set(handle, (root = new File(parent.getDataFolder().getParentFile(), handle.getDescription().getName().replaceAll(" ", "_"))));
+        } catch (Exception ingored) {}
     }
 
     public void closeLoader(URLClassLoader classLoader) {
