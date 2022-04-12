@@ -1,3 +1,3 @@
 # ILoader
 actually fucking shit.
-(use if you want to be dumped in 2 seconds)
+use this if you want your product to be dumped out of the JVM in 20 millis
